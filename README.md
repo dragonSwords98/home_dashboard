@@ -12,7 +12,7 @@
 
 ## Features
 1. Today's Weather from OpenWeather API
-2. Google Calendar lists for Bryan and Sinto
+2. Google Calendar lists
 3. Photo of the Day from Unsplash API (random)
 4. Time, clocked using Javascript Date() and Moment.js
 5. Ping Test (False Data) using Chart.js
