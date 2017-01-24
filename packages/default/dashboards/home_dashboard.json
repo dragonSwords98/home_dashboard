@@ -1,0 +1,76 @@
+{
+  "title": "Home Dashboard",
+  "titleVisible": false,
+
+  "description": "Dashboard for Home",
+
+  "layout": {
+    "gridSize" : { "rows" : 18, "columns" : 12 },
+    "customJS" : ["jquery.peity.js", "Chart.bundle.min.js", "google-maps-api.js"],
+    "widgets" : [
+      {"row" : 1, "col" : 1, "width" : 5, "height" : 9,   "widget" : "commute-time-maps", "job" : "google-maps-api", "config" : "google-developer-prototype"},
+      {"row" : 1, "col" : 6, "width" : 5, "height" : 9,   "widget" : "commute-time-maps", "job" : "google-maps-api", "config" : "google-developer-prototype"},
+      {"row" : 1, "col" : 11, "width" : 2, "height" : 3,  "widget" : "time",              "job" : "time",            "config" : "time"},
+      {"row" : 3, "col" : 11, "width" : 2, "height" : 6,  "widget" : "ping-test-graph",   "job" : "speedtest-net",   "config" : "ping-test"},
+      {"row" : 10, "col" : 1, "width" : 5, "height" : 9,  "widget" : "commute-time-maps", "job" : "google-maps-api", "config" : "google-developer-prototype"},
+      {"row" : 10, "col" : 6, "width" : 3, "height" : 9,  "widget" : "current-weather",   "job" : "weather-feed",    "config" : "openWeather"},
+      {"row" : 10, "col" : 9, "width" : 2, "height" : 6,  "widget" : "calendar",          "job" : "google-calendar", "config" : "calendar-prototype"},
+      {"row" : 10, "col" : 11, "width" : 2, "height" : 6, "widget" : "calendar",          "job" : "google-calendar", "config" : "calendar-prototype"},
+      {"row" : 15, "col" : 8, "width" : 4, "height" : 3,  "widget" : "qotd",              "job" : "theysaidso",      "config" : "quote"}
+    ]
+  },
+
+  "config" : {
+    "ping-test": {
+      "interval": 60000,
+      "timeout": 12500,
+      "widgetTitle": "WIFI Ping Test",
+      "storeLimit": 720,
+      "widgetLimit": 50,
+      "days": 2
+    },
+    "quote": {
+      "interval": 10800000,
+      "widgetTitle": "Quote of the Day",
+      "url" : "http://quotes.rest/qod.json"
+    },
+    "unsplash": {
+      "interval": 43200000,
+      "widgetTitle": "Photo of the Day",
+      "url": "https://api.unsplash.com/photos/random",
+      "auth": "Client-ID INSERTYOUROWNKEY"
+    },
+
+    "google-developer-prototype": {
+      "interval": 30000,
+      "widgetTitle": "Somebody's Morning Commute",
+      "user": "somebody",
+      "mapsUrl": "https://maps.googleapis.com/maps/api/js?key=",
+      "directionsUrl": "https://maps.googleapis.com/maps/api/directions/json?origin=Montreal,+QC,+Canada&destination=Toronto,+ON,+Canada&key=",
+      "jobKey": "INSERTYOUROWNKEY",
+      "widgetKey": "INSERTYOUROWNKEY",
+      "morningDepart": "Montreal,+QC,+Canada",
+      "morningArrive": "Toronto,+ON,+Canada",
+      "travelMode": "TRANSIT",
+      "rushHours": [7, 8, 9]
+    },
+
+    "openWeather": {
+      "interval": 43200000,
+      "widgetTitle": "Weather - Somewhere",
+      "url" : "http://api.openweathermap.org/data/2.5/weather?id=GETYOUROWNID&appid=GETYOUROWNID"
+    },
+
+    "time": {
+      "interval": 60000,
+      "widgetTitle": "Clock"
+    },
+
+    "calendar-prototype": {
+      "interval": 10800000,
+      "calendarUrl": "https://calendar.google.com/calendar/ical/INSERTYOUROWNICS",
+      "maxEntries": 9,
+      "widgetTitle": "Event View - Somebody"
+    }
+  }
+}

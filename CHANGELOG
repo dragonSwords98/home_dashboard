@@ -1,0 +1,13 @@
+# 1.0 - 2016-11-19
+### Added
+- Today's Weather from OpenWeather API
+- Google Calendar lists for Bryan and Sinto
+- Photo of the Day from Unsplash API (random)
+- Time, clocked using Javascript Date() and Moment.js
+- Ping Test (False Data) using Chart.js
+- Quote of the Day from theysaidso
+
+# 2.0 - 2017-01-23
+### Added
+- Ping Test using Chart.js and speedtest.net implementation by (https://github.com/ddsol/speedtest.net)
+- release to GitHub without personal info or API keys
