@@ -18,11 +18,12 @@ You will need to edit ``` assets/javascripts/google-maps-api.js``` and ```packag
 
 ## Features
 1. Today's Weather from OpenWeather API
-2. Google Calendar lists
-3. Photo of the Day from Unsplash API (random)
-4. Time, clocked using Javascript Date() and Moment.js
-5. Ping Test (speedtest.net) using Chart.js
-6. Quote of the Day from theysaidso
+2. Google Maps & Directions API to display commute times to users (map, directions, bus/road route info, depart/arrive time, distance and duration
+3. Google Calendar lists
+4. ~~Photo of the Day from Unsplash API (random)~~ (Disabled due to space)
+5. Time, clocked using Javascript Date() and Moment.js
+6. ~~Ping Test (speedtest.net) using Chart.js~~ (Disabled due to WIFI lag)
+7. Quote of the Day from theysaidso
 
 All this made possible by Atlassian Project: [Atlasboard](http://atlasboard.bitbucket.org/)
 
